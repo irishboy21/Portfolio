@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connor Crimmins · Electrical Engineering Portfolio</title>
+  <meta name="description" content="Electrical Engineering portfolio of Connor Crimmins, Iowa State University: senior design, circuit projects, experience, résumé and reflections.">
+  <meta property="og:title" content="Connor Crimmins · Electrical Engineering Portfolio">
+  <meta property="og:description" content="Senior design, circuit projects, experience, résumé and reflections.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <!-- Icon set (line icons for tools and contact links) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-chip" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="9" y="9" width="14" height="14" rx="1.5"/><rect x="13" y="13" width="6" height="6"/><path d="M12 9V5M16 9V5M20 9V5M12 27v-4M16 27v-4M20 27v-4M9 12H5M9 16H5M9 20H5M27 12h-4M27 16h-4M27 20h-4"/></symbol>
+      <symbol id="i-wave" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5v22h22"/><path d="M7 17c2.5-9 5-9 7.5 0s5 9 7.5 0 3-6 3.5-6"/><path d="M9 9h3M9 9v0" opacity=".5"/></symbol>
+      <symbol id="i-check" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="22" height="22" rx="2"/><path d="M5 12h22M5 19h22M12 5v22M19 5v22" opacity=".35"/><circle cx="22" cy="22" r="6" fill="var(--bg)"/><path d="m19.3 22 1.9 1.9 3.6-3.8"/></symbol>
+      <symbol id="i-opamp" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6v20l17-10z"/><path d="M3 11h6M3 21h6M26 16h4M11.5 11h3M13 9.5v3M11.5 21h3"/></symbol>
+      <symbol id="i-sheet" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="5" y="6" width="22" height="20" rx="1.5"/><path d="M5 12h22M5 18h22M12 6v20M19.5 6v20"/></symbol>
+      <symbol id="i-doc" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 4H9a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10z"/><path d="M19 4v6h6M11 15h10M11 19h10M11 23h6"/></symbol>
+      <symbol id="i-slides" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="24" height="16" rx="1.5"/><path d="M16 21v6M11 27h10M9 17v-4M13 17v-7M17 17v-5"/><path d="M20 13a3 3 0 1 0 3-3v3z"/></symbol>
+      <symbol id="i-smith" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="16" cy="16" r="11"/><circle cx="21.5" cy="16" r="5.5"/><circle cx="19" cy="16" r="8" opacity=".5"/><path d="M5 16h22"/><path d="M27 16a11 11 0 0 0-11-11" opacity=".0"/><path d="M27 16c0-6-5-9.5-11-9.5M27 16c0 6-5 9.5-11 9.5" opacity=".5"/></symbol>
+      <symbol id="i-scope" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="26" height="18" rx="1.5"/><rect x="6" y="10" width="14" height="12"/><path d="M7 16c1.5-4 3-4 4.5 0s3 4 4.5 0 2.5-3 3-3"/><circle cx="24" cy="12" r="1.6"/><circle cx="24" cy="19" r="1.6"/></symbol>
+      <symbol id="i-fgen" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="26" height="16" rx="1.5"/><path d="M6 20v-6h4v6h4v-6h4v6"/><circle cx="24" cy="16" r="2.6"/></symbol>
+      <symbol id="i-psu" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="24" height="18" rx="1.5"/><rect x="7" y="10" width="10" height="5"/><circle cx="10" cy="20.5" r="1.8"/><circle cx="22" cy="20.5" r="1.8"/><path d="M21 11.5h3M22.5 10v3M8.5 20.5h3" /></symbol>
+      <symbol id="i-dmm" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="16" height="26" rx="2.5"/><rect x="11" y="6" width="10" height="6"/><circle cx="16" cy="18.5" r="3.5"/><path d="M16 18.5l2-2"/><circle cx="12.5" cy="25.5" r=".9"/><circle cx="19.5" cy="25.5" r=".9"/></symbol>
+      <symbol id="i-board" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="4" y="6" width="24" height="20" rx="1.5"/><path d="M4 16h24" opacity=".4"/><g stroke-width="2"><path d="M8 10h.01M12 10h.01M16 10h.01M20 10h.01M24 10h.01M8 13h.01M12 13h.01M16 13h.01M20 13h.01M24 13h.01M8 19h.01M12 19h.01M16 19h.01M20 19h.01M24 19h.01M8 22h.01M12 22h.01M16 22h.01M20 22h.01M24 22h.01"/></g></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-in" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar" aria-label="Sections">
+    <a class="who" href="#top">
+      <img class="logo" src="assets/img/logo.svg" alt="" width="40" height="40">
+      <b>Connor Crimmins</b>
+      <span>Electrical Engineering @ Iowa State</span>
+    </a>
+    <ul class="side-nav">
+      <li><a href="#about"><span class="n"></span>About &amp; Objective</a></li>
+      <li class="gap" aria-hidden="true"></li>
+      <li><a href="#senior-design"><span class="n">I</span>Senior Design: Eddy Currents</a></li>
+      <li><a href="#ptat"><span class="n">II</span>PTAT Temperature Sensor IC</a></li>
+      <li><a href="#indicator"><span class="n">III</span>Temperature Indicator</a></li>
+      <li><a href="#project-four"><span class="n">IV</span><span class="ph">Project Four</span></a></li>
+      <li class="gap" aria-hidden="true"></li>
+      <li><a href="#experience"><span class="n">V</span>Experience</a></li>
+      <li><a href="#skills"><span class="n">VI</span>Skills</a></li>
+      <li><a href="#resume"><span class="n">VII</span>Résumé</a></li>
+      <li><a href="#reflections"><span class="n">VIII</span>Reflections</a></li>
+      <li><a href="#ethics"><span class="n">IX</span>Ethics Paper</a></li>
+      <li class="gap" aria-hidden="true"></li>
+      <li><a href="#contact"><span class="n"></span>Contact</a></li>
+    </ul>
+    <div class="side-links">
+      <a href="#contact">Email</a>
+      <a href="#contact">LinkedIn</a>
+      <a href="#resume">Résumé</a>
+    </div>
+  </aside>
+  <div class="scrim"></div>
+
+  <div class="main" id="top">
+    <div class="topbar">
+      <button class="icon-btn side-btn" type="button" aria-label="Toggle sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M9.5 4.5v15"/></svg>
+      </button>
+      <button class="icon-btn theme-btn" type="button" aria-label="Toggle dark mode">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="mini" href="#top">Connor Crimmins</a>
+    </div>
+
+    <!-- ================= COVER ================= -->
+    <header class="cover">
+      <div class="cover-art" aria-hidden="true"></div>
+      <div class="cover-frame">
+        <div class="cover-inner">
+          <h1>Connor Crimmins</h1>
+          <div class="sub">Electrical Engineering Portfolio</div>
+          <div class="affil-line">
+            <img src="assets/img/logos/iowa-state-cyclones.svg" alt="Iowa State" width="35" height="24">
+            <span>Electrical Engineering @ Iowa State</span>
+          </div>
+        </div>
+        <ul class="affils" aria-label="Affiliations">
+          <li>
+            <a href="https://www.iastate.edu" target="_blank" rel="noopener">
+              <span class="tile wide"><img src="assets/img/logos/iowa-state.webp" alt="Iowa State University"></span>
+              <small>B.S. Electrical Engineering</small>
+            </a>
+          </li>
+          <li>
+            <a href="#senior-design">
+              <span class="tile sd"><b>18</b><i>Senior Design</i></span>
+              <small>Eddy-Current Probe</small>
+            </a>
+          </li>
+          <li>
+            <a href="#experience">
+              <span class="tile empty" aria-hidden="true">+</span>
+              <small class="ph">[Internship]</small>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a class="scroll-cue" href="#contents">
+        <span class="tracked">Scroll to see projects</span>
+        <svg viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M1 2l6 6 6-6M1 8l6 6 6-6M1 14l6 6 6-6"/></svg>
+      </a>
+    </header>
+
+    <!-- ================= CONTENTS ================= -->
+    <section class="chapter" id="contents" aria-label="Table of contents">
+      <div class="page">
+        <div class="toc-head"><span><span class="caps">Table of Contents</span></span></div>
+        <ol class="toc">
+          <li><a href="#senior-design"><span class="num">I</span><span class="row"><span class="t">Measuring Conductivity with Eddy Currents</span></span></a></li>
+          <li><a href="#ptat"><span class="num">II</span><span class="row"><span class="t">A Temperature Sensor on a Chip</span></span></a></li>
+          <li><a href="#indicator"><span class="num">III</span><span class="row"><span class="t">A Temperature Indicator with Memory</span></span></a></li>
+          <li><a href="#project-four"><span class="num">IV</span><span class="row"><span class="t"><span class="ph">Project Four</span></span></span></a></li>
+          <li><a href="#experience"><span class="num">V</span><span class="row"><span class="t">Experience</span></span></a></li>
+          <li><a href="#skills"><span class="num">VI</span><span class="row"><span class="t">Skills</span></span></a></li>
+          <li><a href="#resume"><span class="num">VII</span><span class="row"><span class="t">Résumé</span></span></a></li>
+          <li><a href="#reflections"><span class="num">VIII</span><span class="row"><span class="t">Reflections</span></span></a></li>
+          <li><a href="#ethics"><span class="num">IX</span><span class="row"><span class="t">Ethics Paper</span></span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT / CAREER OBJECTIVE ================= -->
+    <section class="chapter" id="about">
+      <div class="page">
+        <div class="heading fade">
+          <h2>About &amp; Career Objective</h2>
+          <p>A little about me and where I want to go from here.</p>
+        </div>
+        <div class="about fade">
+          <div>
+            <p class="lead">Hi, I'm Connor. I'm an Electrical Engineering student at Iowa State, and I like circuits that measure things.</p>
+            <dl class="facts">
+              <div><dt>Degree</dt><dd>B.S. Electrical Engineering</dd></div>
+              <div><dt>School</dt><dd>Iowa State University, Ames</dd></div>
+              <div><dt>Graduating</dt><dd><span class="ph">May 2027</span></dd></div>
+              <div><dt>Interests</dt><dd>Analog circuits, sensors, measurement</dd></div>
+            </dl>
+          </div>
+          <div class="text">
+            <p>I've built a temperature sensor twice. In EE 230 it was op-amps and comparators on a breadboard. It worked, but the LEDs switched a few degrees off from where they were supposed to. In EE 330 I designed one as an integrated circuit in Cadence, and the output came within 0.02% of the target slope. Going from the first one to the second taught me how much the small details matter, like how a reference voltage is set or how a transistor is sized.</p>
+            <p>That's the kind of work I want to keep doing. I'm most interested in analog circuits, sensors and measurement, where the circuit takes something physical, like temperature or a magnetic field, and turns it into a signal you can trust. My senior design project is pushing me into electromagnetics and RF measurement, which is new for me.</p>
+            <p>After I graduate, I want to join a team that designs or tests analog, sensor or measurement hardware. I want to learn from experienced engineers, get better at the details and eventually be the person who can take a design from the first sketch to a working, tested product. I'm continuing into EE 435 to go further into analog IC design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= I. SENIOR DESIGN ================= -->
+    <section class="chapter" id="senior-design">
+      <div class="page">
+        <div class="spread fade">
+          <div class="frame">
+            <span class="numeral">I</span>
+            <h2>Measuring Conductivity with Eddy Currents</h2>
+            <p class="tagline">Senior Design: A Non-Destructive Way to Read a Metal's Conductivity</p>
+            <p class="meta">EE 4910 / 4920 · Project 18 · Advisor: Dr. Jiming Song<br>Fall 2026 – Spring 2027<br>Team of Six</p>
+            <div class="body">
+              <p>Our team is building a system that measures how well a metal conducts electricity without cutting, touching or damaging it. A vector network analyzer (VNA) sends an AC signal into a flat copper coil. The coil's changing magnetic field induces swirling eddy currents in the metal underneath it.</p>
+              <p>Those eddy currents push back with their own magnetic field, which changes the coil's impedance. The VNA picks up that change in its S<sub>11</sub> measurement. A better conductor changes the impedance more, so we can measure reference samples with known conductivity, build a calibration, and use it to estimate the conductivity of an unknown sample.</p>
+            </div>
+          </div>
+          <div class="spread-side">
+            <div class="key">
+              <div class="kt">How It Works</div>
+              <div class="ks">Eddy-Current Measurement</div>
+              <ol>
+                <li>The VNA sends an AC signal into the coil probe.</li>
+                <li>The coil's changing magnetic field induces eddy currents in the metal.</li>
+                <li>The eddy currents' field changes the coil's impedance (S<sub>11</sub>).</li>
+                <li>Calibration with reference samples turns that change into conductivity σ.</li>
+              </ol>
+            </div>
+            <div class="callout-line">
+              <p><em>Why frequency matters:</em> eddy currents stay near the surface. The depth they reach, the skin depth δ = 1/√(π f μ σ), gets smaller as frequency or conductivity goes up. Picking the test frequency sets how deep into the sample we're measuring.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="notes fade">
+          <div class="note">
+            <h3>My Role</h3>
+            <p class="ph">[Write 3–4 sentences about what you're responsible for on the team: which part of the system you work on (coil, VNA setup and calibration, data processing, samples, documentation), any team role you hold, and what you've designed, built or tested so far.]</p>
+          </div>
+          <div class="note">
+            <h3>Skills &amp; Knowledge Gained</h3>
+            <ul>
+              <li>How eddy currents and skin depth turn into a measurable change in coil impedance</li>
+              <li>Using a VNA, reading S-parameters and calibrating before measuring</li>
+              <li>Planning experiments: test frequencies, probe-to-sample distance, reference samples</li>
+              <li>Working on a six-person team on a two-semester timeline, with weekly reports and advisor meetings</li>
+            </ul>
+          </div>
+          <div class="note">
+            <h3>Supporting Documents</h3>
+            <ul class="docs">
+              <li><span class="d"><span class="ph">Project plan / problem statement</span> <em>PDF</em></span></li>
+              <li><span class="d"><span class="ph">Design document</span> <em>PDF</em></span></li>
+              <li><span class="d"><span class="ph">Weekly reports &amp; presentations</span> <em>Link</em></span></li>
+              <li><span class="d"><span class="ph">Prototype photos &amp; test results</span> <em>Later</em></span></li>
+            </ul>
+          </div>
+          <div class="note">
+            <h3>Big-Picture Contribution</h3>
+            <p>Eddy-current testing is used in aerospace, automotive and manufacturing to sort metals, check heat treatment and find cracks before parts fail. The instruments that do it are expensive. A simpler setup built around a VNA and a calibrated coil could make the method easier to use in teaching labs and small shops. It also leaves a documented process that future teams can build on. <span class="ph">[Add a sentence on how your part helps.]</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= II. PTAT SENSOR ================= -->
+    <section class="chapter" id="ptat">
+      <div class="page">
+        <div class="spread fade">
+          <div class="frame">
+            <span class="numeral">II</span>
+            <h2>A Temperature Sensor on a Chip</h2>
+            <p class="tagline">A PTAT Temperature Sensor Designed in 45 nm CMOS</p>
+            <p class="meta">EE 330 Integrated Electronics · Final Project<br>Spring 2026<br>With Eric Williams</p>
+            <div class="body">
+              <p>For the EE 330 final project, Eric Williams and I designed a temperature sensor as an integrated circuit. The output had to rise in a straight line with temperature, from 0 V at 0 °C to 1 V at 50 °C. That's 20 mV per degree.</p>
+              <p>The sensor uses two diodes of different sizes. The difference between their voltages grows evenly with temperature, but by less than 1 mV per degree. So we designed our own two-stage op-amp, added a voltage divider to cancel the offset at 0 °C, and set the gain to bring the slope up to 20 mV/°C. We took the whole thing through schematic, layout and DRC/LVS checks in Cadence.</p>
+            </div>
+          </div>
+          <figure class="spread-media dark">
+            <img src="assets/img/ee330-full-layout.webp" alt="Cadence layout of the complete temperature sensor circuit." loading="lazy">
+            <figcaption>Layout of the full sensor in Cadence Virtuoso</figcaption>
+          </figure>
+        </div>
+
+        <div class="figures-row fade">
+          <div><b>20.004</b><span>mV/°C slope</span></div>
+          <div><b>0.02%</b><span>slope error</span></div>
+          <div><b>~55°</b><span>op-amp phase margin</span></div>
+          <div><b>±1.8 V</b><span>supply rails</span></div>
+        </div>
+
+        <div class="plate fade">
+          <div class="key">
+            <div class="kt">From Schematic to Layout</div>
+            <div class="ks">Cadence Virtuoso / gpdk045</div>
+            <ol>
+              <li>Output vs. Temperature, 0–50 °C</li>
+              <li>Two-Stage Op-Amp Topology</li>
+              <li>Op-Amp Gain &amp; Phase</li>
+              <li>PTAT Core: Current Mirror &amp; Diodes</li>
+              <li>Hand Calculations</li>
+              <li>Op-Amp Layout</li>
+            </ol>
+          </div>
+          <div class="figs">
+            <figure class="dk"><button type="button"><img src="assets/img/ee330-output-sweep.webp" alt="1. Output voltage vs. temperature: a straight line from about 0 V at 0 °C to 1 V at 50 °C." loading="lazy"></button><figcaption>1.</figcaption></figure>
+            <figure><button type="button"><img src="assets/img/ee330-7t-opamp.webp" alt="2. Two-stage, seven-transistor op-amp topology." loading="lazy"></button><figcaption>2.</figcaption></figure>
+            <figure class="dk"><button type="button"><img src="assets/img/ee330-gain-phase.webp" alt="3. Op-amp loop gain and phase. About 55° of phase margin." loading="lazy"></button><figcaption>3.</figcaption></figure>
+            <figure class="dk"><button type="button"><img src="assets/img/ee330-ptat-core.webp" alt="4. PTAT core: a current mirror driving two diodes with a 16:1 area ratio." loading="lazy"></button><figcaption>4.</figcaption></figure>
+            <figure><button type="button"><img src="assets/img/ee330-ptat-calcs.webp" alt="5. Hand calculations for the diode ratio, PTAT current and mirror sizing." loading="lazy"></button><figcaption>5.</figcaption></figure>
+            <figure class="dk"><button type="button"><img src="assets/img/ee330-opamp-layout.webp" alt="6. Op-amp layout. Passed DRC, LVS within 0.002%." loading="lazy"></button><figcaption>6.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="notes fade">
+          <div class="note">
+            <h3>My Role</h3>
+            <p>Eric and I split the work and helped each other on every part. I started by reading research papers on how diodes change with temperature, so we understood the PTAT idea before we committed to a design. I worked on <span class="ph">[the op-amp sizing / the PTAT calculations / the layout: pick what you led]</span>, and I spent a lot of time with the TAs fixing DRC errors and comparing the layout against the schematic to track down LVS problems.</p>
+          </div>
+          <div class="note">
+            <h3>Skills &amp; Knowledge Gained</h3>
+            <ul>
+              <li>The full custom IC flow: schematic, symbol, testbench, layout, DRC and LVS</li>
+              <li>Sizing transistors from process parameters, plus biasing and op-amp stability (phase margin)</li>
+              <li>How two mismatched diodes produce a voltage that tracks temperature</li>
+              <li>Thinking about layout early. Parts that work in a schematic don't always carry over.</li>
+              <li>Asking TAs for help effectively and being honest about what didn't get finished</li>
+            </ul>
+          </div>
+          <div class="note">
+            <h3>Resources Used</h3>
+            <ul>
+              <li>Cadence Virtuoso, ADE Explorer and Pegasus DRC/LVS</li>
+              <li>gpdk045 45 nm design kit, using parameters we extracted in Lab 7</li>
+              <li>Dr. Geiger's op-amp design notes and spreadsheet</li>
+              <li>ScienceDirect papers on diode temperature sensing</li>
+              <li>EE 330 TAs and classmates. ChatGPT, with instructor approval, to explain diode physics.</li>
+            </ul>
+          </div>
+          <div class="note">
+            <h3>What Didn't Go Perfectly</h3>
+            <p>The op-amp's gain came out at about 54 dB instead of the 80 dB we designed for, after we resized transistors to pass DRC/LVS. The top-level layout still had five substrate DRC errors and some LVS mismatches that neither we nor the TAs could solve before finals. Next time I'd pick layout-ready parts from the start and run DRC much earlier.</p>
+            <ul class="docs" style="margin-top: 14px;">
+              <li><a href="assets/docs/ee330-ptat-temperature-sensor-report.pdf" target="_blank" rel="noopener">Final project report <em>PDF · 29 pp</em></a></li>
+              <li><a href="assets/docs/ee330-project-options.pdf" target="_blank" rel="noopener">Project assignment <em>PDF</em></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= III. TEMPERATURE INDICATOR ================= -->
+    <section class="chapter" id="indicator">
+      <div class="page">
+        <div class="spread fade">
+          <div class="frame">
+            <span class="numeral">III</span>
+            <h2>A Temperature Indicator with Memory</h2>
+            <p class="tagline">Op-Amp Comparators That Switch Differently When Heating and Cooling</p>
+            <p class="meta">EE 230 Electronic Circuits &amp; Systems · Design Project<br><span class="ph">Spring 2025</span><br>With Eric Williams</p>
+            <div class="body">
+              <p>The goal was to take the signal from an LM35 temperature sensor (10 mV per °C) and show the temperature with three LEDs. Green is on below 40 °C. Orange turns on above 40 °C, and red joins it above 100 °C.</p>
+              <p>On the way back down, the switching points are different. Red stays on until 80 °C, and orange stays on until 30 °C. This is called hysteresis, and it keeps the LEDs from flickering when the temperature sits right at a limit. We amplified the sensor signal with a non-inverting op-amp, then sent it into three hysteresis comparators built from LMC660 op-amps. We simulated the circuit in LTspice, then built and tested it on a breadboard.</p>
+            </div>
+          </div>
+          <figure class="spread-media">
+            <img src="assets/img/ee230-breadboard.webp" alt="The breadboard circuit with the green LED lit." loading="lazy">
+            <figcaption>The finished breadboard, green LED on</figcaption>
+          </figure>
+        </div>
+
+        <div class="plate fade">
+          <div class="key">
+            <div class="kt">Design &amp; Build</div>
+            <div class="ks">LTspice / Breadboard</div>
+            <ol>
+              <li>LTspice Schematic</li>
+              <li>Hand Calculations</li>
+              <li>Breadboard Build</li>
+            </ol>
+            <p style="margin-top: 16px; font-style: italic; color: var(--muted);">Measured: 0 V → green · 0.4 V → orange · 1.05 V → orange + red</p>
+          </div>
+          <div class="figs">
+            <figure class="wide"><button type="button"><img src="assets/img/ee230-schematic.webp" alt="1. LTspice schematic: an input amplifier feeding three hysteresis comparators that drive LEDs." loading="lazy"></button><figcaption>1.</figcaption></figure>
+            <figure><button type="button"><img src="assets/img/ee230-hand-calcs.webp" alt="2. Hand calculations for the comparator thresholds and resistor values." loading="lazy"></button><figcaption>2.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="notes fade">
+          <div class="note">
+            <h3>My Role</h3>
+            <p>Eric and I did this project together. We worked out the threshold and resistor math by hand, built the LTspice simulation, built (and rebuilt) the breadboard and measured where each LED switched. <span class="ph">[Add the parts you led yourself.]</span></p>
+          </div>
+          <div class="note">
+            <h3>Skills &amp; Knowledge Gained</h3>
+            <ul>
+              <li>How comparators with hysteresis (Schmitt triggers) work and how to set their trip points</li>
+              <li>Using an op-amp gain stage to boost a small sensor signal</li>
+              <li>Going from an LTspice simulation to real hardware and comparing the two</li>
+              <li>Debugging. Our first version used transistors as switches and didn't work. With a TA's help, we switched to comparators.</li>
+            </ul>
+          </div>
+          <div class="note">
+            <h3>Resources Used</h3>
+            <ul>
+              <li>LTspice for schematic and simulation</li>
+              <li>EE 230 lab kit, LMC660 op-amps, LEDs and an LM35 sensor (a DC supply stood in for testing)</li>
+              <li>Bench power supplies and a multimeter</li>
+              <li>Gary Tuttle's <em>Comparators</em> notes (Iowa State) and TI's <em>Comparator with Hysteresis Reference Design</em></li>
+              <li>EE 230 TAs</li>
+            </ul>
+          </div>
+          <div class="note">
+            <h3>Result &amp; Lesson</h3>
+            <p>The circuit worked and the LEDs changed in the right order, but the switching points were a few degrees off. We set the comparator reference voltages directly instead of designing proper voltage dividers, and a few resistor values were off. The big lesson was to treat reference voltages as part of the design. I used that later in EE 330.</p>
+            <ul class="docs" style="margin-top: 14px;">
+              <li><a href="assets/docs/ee230-temperature-indicator-report.pdf" target="_blank" rel="noopener">Project report <em>PDF · 14 pp</em></a></li>
+              <li><a href="assets/docs/ee230-design-assignment.pdf" target="_blank" rel="noopener">Design assignment <em>PDF</em></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= IV. PROJECT FOUR (fill in) ================= -->
+    <section class="chapter" id="project-four">
+      <div class="page">
+        <div class="spread fade">
+          <div class="frame">
+            <span class="numeral">IV</span>
+            <h2><span class="ph">Project Title</span></h2>
+            <p class="tagline ph">[One-line subtitle]</p>
+            <p class="meta ph">[Course · Project type]<br>[Semester]<br>[Individual / team]</p>
+            <div class="body">
+              <p class="ph">[Description: what the assignment or problem was, what the requirements were, how your design works and how it turned out. Two short paragraphs is enough. This can be from another course, a club, a job or a personal build.]</p>
+            </div>
+          </div>
+          <figure class="spread-media">
+            <figcaption>[Add a photo, schematic or plot]</figcaption>
+          </figure>
+        </div>
+        <div class="notes fade">
+          <div class="note"><h3>My Role</h3><p class="ph">[What you personally designed, built, coded, tested or wrote.]</p></div>
+          <div class="note"><h3>Skills &amp; Knowledge Gained</h3><p class="ph">[Two to four bullet points: concepts, tools and soft skills.]</p></div>
+          <div class="note full"><h3>Resources Used</h3><p class="ph">[Software, hardware, datasheets, textbooks, lecture notes and people who helped.]</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= V. EXPERIENCE ================= -->
+    <section class="chapter" id="experience">
+      <div class="page">
+        <div class="heading fade">
+          <span class="numeral-inline">V</span>
+          <h2>Experience</h2>
+          <p>Internship, co-op and technical work.</p>
+        </div>
+        <div class="panel fade">
+          <h3><span class="ph">[Job Title]</span></h3>
+          <p class="meta ph">[Company] · [City, State] · [Month Year – Month Year]</p>
+          <div class="notes" style="margin-top: 0;">
+            <div class="note"><h3>Duties &amp; Projects</h3><p class="ph">[What you did day to day, and any specific projects you worked on.]</p></div>
+            <div class="note"><h3>Skills Learned</h3><p class="ph">[Technical: tools, equipment, processes.<br>Soft: communication, teamwork, working with a manager or customers.]</p></div>
+            <div class="note"><h3>Evaluations</h3><p class="ph">[A short quote or summary from your supervisor's evaluation, or a link to it.]</p></div>
+            <div class="note"><h3>Presentations</h3><p class="ph">[Any presentations you gave during or after the job, with links to slides.]</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VI. SKILLS ================= -->
+    <section class="chapter" id="skills">
+      <div class="page">
+        <div class="heading fade">
+          <span class="numeral-inline">VI</span>
+          <h2>Skills</h2>
+          <p>Software and equipment I've used in my projects.</p>
+        </div>
+        <div class="skills fade">
+          <div class="skill-group">
+            <h3>Circuit Design &amp; Simulation</h3>
+            <ul class="tools">
+              <li class="tool" title="Cadence Virtuoso, ADE Explorer and Pegasus DRC/LVS"><div class="ic"><img class="wordmark ink" src="assets/img/logos/cadence.svg" alt="Cadence"></div><span>Virtuoso · ADE · Pegasus</span></li>
+              <li class="tool" title="LTspice (Analog Devices)"><div class="ic"><img class="ink" src="assets/img/logos/analog-devices-mark.svg" alt="Analog Devices"></div><span>LTspice</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Lab &amp; Measurement</h3>
+            <ul class="tools">
+              <li class="tool" title="Vector Network Analyzer"><div class="ic"><svg><use href="#i-smith"/></svg></div><span>Network Analyzer</span></li>
+              <li class="tool" title="Oscilloscope"><div class="ic"><svg><use href="#i-scope"/></svg></div><span>Oscilloscope</span></li>
+              <li class="tool" title="Function Generator"><div class="ic"><svg><use href="#i-fgen"/></svg></div><span>Function Generator</span></li>
+              <li class="tool" title="DC Power Supply"><div class="ic"><svg><use href="#i-psu"/></svg></div><span>DC Power Supply</span></li>
+              <li class="tool" title="Multimeter"><div class="ic"><svg><use href="#i-dmm"/></svg></div><span>Multimeter</span></li>
+              <li class="tool" title="Breadboard prototyping"><div class="ic"><svg><use href="#i-board"/></svg></div><span>Breadboarding</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Office &amp; Documentation</h3>
+            <ul class="tools">
+              <li class="tool" title="Microsoft Excel"><div class="ic"><img src="assets/img/logos/excel.svg" alt="Microsoft Excel"></div><span>Excel</span></li>
+              <li class="tool" title="Microsoft Word"><div class="ic"><img src="assets/img/logos/word.svg" alt="Microsoft Word"></div><span>Word</span></li>
+              <li class="tool" title="Microsoft PowerPoint"><div class="ic"><img src="assets/img/logos/powerpoint.svg" alt="Microsoft PowerPoint"></div><span>PowerPoint</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Concepts</h3>
+            <ul class="tools">
+              <li class="tool"><div class="ic"><svg><use href="#i-opamp"/></svg></div><span>Op-Amp Design</span></li>
+              <li class="tool"><div class="ic"><svg><use href="#i-chip"/></svg></div><span>CMOS Layout</span></li>
+              <li class="tool"><div class="ic"><svg><use href="#i-wave"/></svg></div><span>Sensors &amp; Signals</span></li>
+              <li class="tool"><div class="ic"><svg><use href="#i-smith"/></svg></div><span>Electro&shy;magnetics</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VII. RÉSUMÉ ================= -->
+    <section class="chapter" id="resume">
+      <div class="page">
+        <div class="heading fade">
+          <span class="numeral-inline">VII</span>
+          <h2>Résumé</h2>
+          <p>The full résumé is available as a PDF. A few highlights are below.</p>
+        </div>
+        <div class="panel fade">
+          <div class="btn-row" style="margin-top: 0; justify-content: center;">
+            <a class="btn" href="assets/docs/resume.pdf" target="_blank" rel="noopener"><svg><use href="#i-doc"/></svg>View Résumé</a>
+            <a class="btn" href="assets/docs/resume.pdf" download><svg><use href="#i-down"/></svg>Download PDF</a>
+          </div>
+          <div class="resume-sheet">
+            <div>
+              <h4>Research &amp; Papers</h4>
+              <ul><li class="ph">[Research projects or published papers, or "None yet"]</li></ul>
+            </div>
+            <div>
+              <h4>Awards</h4>
+              <ul><li class="ph">[Dean's List, scholarships, competitions]</li></ul>
+            </div>
+            <div>
+              <h4>Activities</h4>
+              <ul><li class="ph">[Clubs, IEEE, sports, volunteering, leadership]</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIII. REFLECTIONS ================= -->
+    <section class="chapter" id="reflections">
+      <div class="page">
+        <div class="heading fade">
+          <span class="numeral-inline">VIII</span>
+          <h2>Reflections</h2>
+          <p>Looking back at my general education courses and at my growth as an engineer.</p>
+        </div>
+        <div class="two fade">
+          <div class="panel">
+            <h3>General Education</h3>
+            <p class="meta">Reflection</p>
+            <p class="ph">[Paste your General Education reflection here. Follow the rubric: which gen ed courses you took, what you learned from them, and how they connect to your work as an engineer and to society.]</p>
+          </div>
+          <div class="panel" style="margin-top: 0;">
+            <h3>Cumulative</h3>
+            <p class="meta">Reflection</p>
+            <p class="ph">[Paste your cumulative reflection here. Follow the rubric: how you've grown from freshman year to now, how your projects connect, your strengths and what you're still working on.]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= IX. ETHICS ================= -->
+    <section class="chapter" id="ethics">
+      <div class="page">
+        <div class="heading fade">
+          <span class="numeral-inline">IX</span>
+          <h2>Ethics Paper</h2>
+          <p>From <span class="ph">[EE 394 / EE 2320]</span>.</p>
+        </div>
+        <div class="panel fade">
+          <h3><span class="ph">[Paper Title]</span></h3>
+          <p class="meta ph">[Course] · [Semester]</p>
+          <p class="ph">[A short summary: the ethical issue the paper covers, your position, and one thing it changed about how you think about engineering responsibility.]</p>
+          <div class="btn-row">
+            <a class="btn" href="assets/docs/ethics-paper.pdf" target="_blank" rel="noopener"><svg><use href="#i-doc"/></svg>Read the Paper</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="chapter" id="contact">
+      <div class="page">
+        <div class="heading fade">
+          <h2>Contact</h2>
+          <p>Thanks for looking through my work. Feel free to reach out.</p>
+        </div>
+        <ul class="contact-list fade">
+          <li><a href="mailto:"><svg><use href="#i-mail"/></svg><span class="ph">[your email]</span></a></li>
+          <li><a href="#" target="_blank" rel="noopener"><svg><use href="#i-in"/></svg><span class="ph">[LinkedIn profile]</span></a></li>
+          <li><a href="tel:"><svg><use href="#i-phone"/></svg><span class="ph">[phone number]</span></a></li>
+          <li><span class="c"><svg><use href="#i-pin"/></svg>Ames, Iowa</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="foot">&copy; <span id="year">2026</span> Connor Crimmins</footer>
+  </div>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
