@@ -47,12 +47,13 @@ Search `index.html` for `class="ph"` to find each one.
 - [x] Résumé saved as `assets/docs/resume.pdf` and shown on the page
 - [ ] When the résumé changes: replace the PDF and re-render the page images
       `assets/img/resume-p1.webp` and `resume-p2.webp` (1700 px wide, 200 dpi)
-- [ ] Papers/posters and college awards (Dean's List, scholarships), if any
+- [x] Papers/posters and college awards placeholders removed (none to list)
 
 ## VIII. Reflections
 - [x] General Education reflection (text on the page + `assets/docs/general-education-reflection.pdf`)
-- [ ] Cumulative reflection
+- [x] Cumulative reflection (text on the page + `assets/docs/cumulative-reflection.pdf`)
+- [ ] Confirm the cumulative reflection was for EE 4940, October 2026 (the PDF has no header)
 
 ## IX. Ethics Paper
-- [ ] Title, course (EE 394 / EE 2320), summary
-- [ ] Save the paper as `assets/docs/ethics-paper.pdf`
+- [x] "What Is an Ethical Engineer?", EE 232, Fall 2025: summary on the page
+- [x] Paper saved as `assets/docs/ethics-paper.pdf`
