@@ -5,31 +5,35 @@ Search `index.html` for `class="ph"` to find each one.
 
 ## Contact (Contact section, near the bottom of index.html)
 - [x] Email and phone (from the résumé)
-- [ ] LinkedIn URL
+- [x] LinkedIn URL
+
+## About
+- [x] Photo, interests and paragraphs 2 and 4 updated from "Work on this.docx"
 
 ## I. Senior Design: Eddy Currents
-- [ ] **My Role**: what you personally own on the team
-- [ ] Big-picture contribution: one sentence on how your part helps
+- [x] **My Role**: advisor contact, weekly meetings, research and component selection, product look
+- [x] Big-picture contribution: one sentence on how your part helps
 - [ ] Supporting documents: put PDFs in `assets/docs/` and link them
       (project plan, design document, weekly reports, test results)
 - [ ] Add real project photos or figures once the team has them
 
 ## II. PTAT Temperature Sensor (EE 330)
-- [ ] My Role: choose the parts you led (op-amp sizing / PTAT calcs / layout)
+- [x] My Role: layout of the entire circuit
 
 ## III. Temperature Indicator (EE 230)
-- [ ] Confirm the semester (currently "Spring 2025")
-- [ ] My Role: add the parts you led
+- [x] Semester confirmed as Spring 2025 (report dated April 2025)
+- [x] My Role: built the whole circuit by hand, did all testing and validation
 
-## IV. Project Four (required: 3 projects + senior design)
-- [ ] Title, course, semester, description, role, skills, resources
-- [ ] Image: save to `assets/img/` and put an `<img>` inside the empty figure
+## IV. Power Grid in C (EE 285, Spring 2024)
+- [x] Filled in from the EE 285 project report; report saved as `assets/docs/ee285-power-grid-report.pdf`
+- [ ] Confirm the My Role text: Connor says the program asked about weather and traffic, but the
+      report says the weather idea was dropped. Also says ~2,000 lines; the code in the report is shorter.
 
 ## V. Experience
 - [x] IMEG, HR Green and undergraduate research filled in from the résumé
-- [ ] IMEG: soft skills, supervisor evaluation, presentations
-- [ ] Research: professor's name
-- [ ] Cover page uses a text "IMEG" tile. Swap in IMEG's logo if you have a file of it.
+- [x] IMEG and HR Green: soft skills and evaluations (no presentations, section removed)
+- [x] Research: Dr. Santosh Pandey
+- [x] Cover page: Senior Design tile removed; IMEG and HR Green logos added
 
 ## VI. Skills
 - [x] Added Revit, Bluebeam, SKM, NEC/NFPA and embedded programming from the résumé
@@ -46,7 +50,7 @@ Search `index.html` for `class="ph"` to find each one.
 - [ ] Papers/posters and college awards (Dean's List, scholarships), if any
 
 ## VIII. Reflections
-- [ ] General Education reflection
+- [ ] General Education reflection (in progress)
 - [ ] Cumulative reflection
 
 ## IX. Ethics Paper
