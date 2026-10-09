@@ -5,15 +5,15 @@
    ========================================================================== */
 
 :root {
-  --bg: #e3e3df;
-  --side: #d8d8d3;
-  --ink: #121212;
-  --ink-2: #2b2b2a;
-  --muted: #5c5c58;
-  --line: #a6a6a0;
-  --line-soft: #c6c6c0;
-  --ph: #777772;
-  --plate: #d4d4cf;
+  --bg: #ffffff;
+  --side: #ffffff;
+  --ink: #000000;
+  --ink-2: #1f1f1f;
+  --muted: #5e5e5e;
+  --line: #bdbdbd;
+  --line-soft: #e3e3e3;
+  --ph: #8a8a8a;
+  --plate: #f3f3f3;
 
   --serif: "Cormorant Garamond", "Garamond", "Times New Roman", serif;
   --sans: "Open Sans", "Segoe UI", system-ui, sans-serif;
@@ -26,15 +26,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #121212; --side: #171717; --ink: #e9e6e1; --ink-2: #c4c0b9; --muted: #8f8b85;
-    --line: #3a3a3a; --line-soft: #262626; --ph: #6f6b66; --plate: #1b1b1b;
+    --bg: #000000; --side: #000000; --ink: #ffffff; --ink-2: #d9d9d9; --muted: #949494;
+    --line: #3d3d3d; --line-soft: #222222; --ph: #707070; --plate: #111111;
     color-scheme: dark;
   }
   :root:not([data-theme="light"]) .cover-art { filter: invert(1); opacity: .55; }
 }
 :root[data-theme="dark"] {
-  --bg: #121212; --side: #171717; --ink: #e9e6e1; --ink-2: #c4c0b9; --muted: #8f8b85;
-  --line: #3a3a3a; --line-soft: #262626; --ph: #6f6b66; --plate: #1b1b1b;
+  --bg: #000000; --side: #000000; --ink: #ffffff; --ink-2: #d9d9d9; --muted: #949494;
+  --line: #3d3d3d; --line-soft: #222222; --ph: #707070; --plate: #111111;
   color-scheme: dark;
 }
 :root[data-theme="dark"] .cover-art { filter: invert(1); opacity: .55; }
@@ -372,8 +372,8 @@ body.side-closed .topbar .mini { display: block; }
 
 /* Lightbox */
 .lightbox { position: fixed; inset: 0; z-index: 100; background: color-mix(in srgb, var(--bg) 96%, transparent); display: none; place-items: center; padding: 24px; }
-:root[data-theme="dark"] .lightbox { background: rgba(10,10,10,.95); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .lightbox { background: rgba(10,10,10,.95); } }
+:root[data-theme="dark"] .lightbox { background: rgba(0,0,0,.95); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .lightbox { background: rgba(0,0,0,.95); } }
 .lightbox.open { display: grid; }
 .lightbox img { max-width: min(1400px, 100%); max-height: 84vh; }
 .lightbox p { text-align: center; font-style: italic; font-size: .85rem; color: var(--ink-2); margin: 12px 0 0; }
