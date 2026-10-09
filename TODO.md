@@ -50,7 +50,7 @@ Search `index.html` for `class="ph"` to find each one.
 - [ ] Papers/posters and college awards (Dean's List, scholarships), if any
 
 ## VIII. Reflections
-- [ ] General Education reflection (in progress)
+- [x] General Education reflection (text on the page + `assets/docs/general-education-reflection.pdf`)
 - [ ] Cumulative reflection
 
 ## IX. Ethics Paper
